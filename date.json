@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "TECNOLOGIA DA INFORMAÇÃO",
+        "descrição": "Tecnologia, programação, inovação e tendências digitais.",
+        "link": "TI.html"
+    },
+    {
+        "nome": "ESPORTE",
+        "descrição": "Competições, desempenho, saúde e os grandes destaques do esporte.",
+        "link": "esporte.html"
+    },
+    {
+        "nome": "ARTE E CULTURA",
+        "descrição": "Cinema, música, literatura e os movimentos que moldam a cultura.",
+        "link": "arte.html"
+    },
+    {
+        "nome": "DESENVOLVIMENTO PESSOAL",
+        "descrição": "Carreira, habilidades, crescimento profissional e oportunidades no mercado.",
+        "link": "desenvolvimento.html"
+    }
+]

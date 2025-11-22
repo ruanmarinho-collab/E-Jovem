@@ -1,0 +1,521 @@
+/* 
+  ========================================
+  ARQUIVO DE ESTILO - REVISTA JOVEM
+  ========================================
+  Este arquivo contém todos os estilos para o site.
+  Organizado em seções para facilitar a manutenção.
+*/
+
+/* 
+  ----------------------------------------
+  1. IMPORTAÇÃO DE FONTES EXTERNAS
+  ----------------------------------------
+*/
+/* Importa a fonte 'Poppins' do Google Fonts para um visual mais moderno. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* 
+  ----------------------------------------
+  2. VARIÁVEIS GLOBAIS (CUSTOM PROPERTIES)
+  ----------------------------------------
+  - Usar variáveis facilita a manutenção e garante consistência nas cores.
+  - Para alterar uma cor em todo o site, basta mudar o valor aqui.
+*/
+:root {
+    /* Paleta de Cores Principal */
+    --cor-primaria: #5e13aa;      /* Roxo principal, usado em cabeçalhos e rodapés. */
+    --cor-secundaria: #a14d9d;    /* Tom de roxo mais claro, para efeitos 'hover'. */
+    --cor-terciaria: #ddbedc;     /* Roxo bem claro, usado em bordas e detalhes. */
+    --cor-quaternaria: #5e6193;   /* Azul/Roxo para botões e outros destaques. */
+    --cor-preto: #000000;
+
+    /* Cores Neutras */
+    --cor-fundo: #ffffff;         /* Fundo branco para a maior parte do site. */
+    --cor-texto: #333;            /* Cor de texto principal, um cinza escuro. */
+    --cor-texto-claro: #ffffff;   /* Texto branco para usar sobre fundos escuros. */
+}
+
+/* 
+  ----------------------------------------
+  3. ESTILOS GERAIS E RESET
+  ----------------------------------------
+  - Define estilos base para todo o documento.
+*/
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal do site. */
+    margin: 0;                          /* Remove margens padrão do navegador. */
+    padding: 0px;
+    padding-top: 70px;
+    background-color: var(--cor-fundo); /* Aplica a cor de fundo branca. */
+    color: var(--cor-texto);            /* Define a cor padrão do texto. */
+    line-height: 1.6;                   /* Aumenta o espaçamento entre linhas para melhor legibilidade. */
+}
+
+/* Classe 'container' para centralizar o conteúdo e limitar sua largura. */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo. */
+    margin: 0 auto;    /* Centraliza o container na página. */
+    padding: 0 1rem;   /* Espaçamento interno para evitar que o conteúdo cole nas bordas. */
+}
+
+/* Estilo padrão para todos os links. */
+a {
+    color: var(--cor-primaria); /* Cor padrão do link. */
+    text-decoration: none;      /* Remove o sublinhado padrão. */
+    transition: color 0.3s ease;/* Animação suave na mudança de cor. */
+}
+
+/* Efeito ao passar o mouse sobre um link. */
+a:hover {
+    color: var(--cor-secundaria); /* Muda a cor do link. */
+}
+
+/* Estilo para os títulos principais. */
+h1, h2, h3 {
+    font-weight: 600; /* Deixa a fonte um pouco mais forte (seminegrito). */
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+main {
+  padding: 20px;
+}
+
+/* ======== BOTÃO HAMBÚRGUER ======== */
+.hamburger {
+  position: fixed;
+  top: 55px;
+  left: 15px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(0,0,0,0.12);
+}
+
+/* ======== MENU LATERAL ======== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -370px;
+  width: 250px;
+  height: 100%;
+  background:white;
+  color: var(--cor-texto-claro);
+  padding: 25px 20px;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.25);
+  transition: left 0.35s ease;
+  z-index: 999;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+/* BOTÃO FECHAR */
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--cor-terciaria);
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--cor-texto-claro);
+}
+
+/* TÍTULO */
+.side-menu h2 {
+  margin: 2px 0 25px;
+  font-size: 22px;
+  border-bottom: 1px solid var(--cor-terciaria);
+  padding-bottom: 10px;
+  
+}
+
+/* LISTA */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 15px 0;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: var(--cor-preto);
+  font-size: 18px;
+  display: block;
+  padding: 10px 5px;
+  border-radius: 6px;
+  transition: background 0.25s ease, padding-left 0.25s ease;
+}
+
+.side-menu a:hover {
+  background: var(--cor-secundaria);
+  padding-left: 12px;
+}
+
+
+/* logo */ 
+
+.linha {
+    display: flex;
+    align-items: center;       
+    flex-wrap: wrap;    
+    gap: 20px;            
+}
+
+.linha img {
+   margin: -6px 0 25px;
+   font-size: 22px;
+    width: 40px;             
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.linha1 {
+    margin: 0 auto;  
+    align-items: center;       
+    flex-wrap: wrap;    
+    gap: 40px;   
+    
+}
+
+/* 
+  ----------------------------------------
+  4. CABEÇALHO (HEADER)
+  ----------------------------------------
+*/
+header {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-texto-claro);         /* Cor do texto branca. */
+    padding: 1.5rem 0;                     /* Espaçamento interno vertical. */
+    text-align: center;                    /* Centraliza o conteúdo. */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidade. */
+}
+
+header h1 {
+    
+    margin: -25px;             
+    font-size: 2.5rem;        
+    font-weight: 700;        
+}
+
+header h1 + p {
+    margin-top: 90px;
+}
+
+
+/* Estilo para o link "Voltar para a página inicial" no cabeçalho das páginas internas. */
+header a {
+    margin: 0;
+    color: var(--cor-texto-claro);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: rgba(255,255,255,0.1); /* Fundo semi-transparente. */
+    padding: 0.5rem 1rem;
+    border-radius: 20px; /* Bordas arredondadas. */
+}
+
+header a:hover {
+    background-color: rgba(255,255,255,0.2); /* Fundo fica um pouco mais visível. */
+    color: var(--cor-texto-claro);
+}  
+
+.roxo {
+  color: #5e13aa;
+}
+
+.preto {
+ color: black;
+}
+
+h3 {
+    margin: 0;  
+}
+
+.topo {
+    position: fixed;   /* deixa o cabeçalho preso na tela */
+    top: 0;
+    left: 0;
+    width: 100%;       /* ocupa toda a largura */
+    background: white; /* fundo branco para não misturar com o conteúdo */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;     /* garante que ele fica por cima do resto */
+     background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+/* 
+  ----------------------------------------
+  5. CONTEÚDO PRINCIPAL (MAIN)
+  ----------------------------------------
+*/
+main {
+    padding: 2rem 1rem; /* Espaçamento interno vertical e horizontal. */
+}
+
+/* Título dentro do conteúdo principal. */
+main h1 {
+    text-align: center;     /* Centraliza o título. */
+    margin-bottom: 2rem;    /* Espaço abaixo do título. */
+    color: var(--cor-primaria); /* Cor roxa para o título. */
+}
+
+/* Container dos cards. */
+.card-container {
+    display: grid; /* Usa o layout em grade (Grid). */
+    /* Cria colunas flexíveis: cada uma com no mínimo 300px. O navegador se encarrega de ajustar quantas colunas cabem na tela. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaçamento entre os cards. */
+    justify-content: center; /* Centraliza os cards quando há espaço sobrando. */
+}
+
+/* Estilo individual de cada card. */
+.card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-terciaria); /* Borda sutil. */
+    border-radius: 15px;                    /* Cantos arredondados. */
+    overflow: hidden;                       /* Garante que nada "vaze" dos cantos arredondados. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);  /* Sombra leve. */
+    /* Animação suave para o efeito de levantar e para a sombra. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Link que envolve todo o card. */
+.card a {
+    text-decoration: none; /* Remove sublinhado. */
+    color: inherit;        /* O link herda a cor do texto do card. */
+    display: block;        /* Faz o link ocupar todo o espaço do card, tornando-o clicável. */
+    padding: 1.5rem;       /* Espaçamento interno do card. */
+}
+
+/* Efeito ao passar o mouse sobre o card. */
+.card:hover {
+    transform: translateY(-10px); /* Levanta o card em 10 pixels. */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Aumenta a sombra para dar mais destaque. */
+}
+
+/* Título dentro do card. */
+.card h2 {
+    margin-top: 0;
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+}
+
+/* Parágrafo dentro do card. */
+.card p {
+    color: #666; /* Cinza um pouco mais claro para o texto secundário. */
+}
+
+/* 
+  ----------------------------------------
+  6. RODAPÉ (FOOTER)
+  ----------------------------------------
+*/
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem; /* Espaço acima do rodapé. */
+}
+
+footer h1 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+/* Lista de redes sociais. */
+footer ul {
+    list-style: none; /* Remove os marcadores (bolinhas) da lista. */
+    padding: 0;
+    margin: 0;
+}
+
+/* Itens da lista de redes sociais. */
+footer li {
+    display: inline;  /* Coloca os itens da lista lado a lado. */
+    margin: 0 15px;   /* Espaçamento entre os itens. */
+}
+
+/* Links no rodapé. */
+footer a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor-terciaria); /* Muda a cor para um roxo mais claro. */
+}
+
+/* Texto de direitos autorais. */
+footer p {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--cor-terciaria); /* Cor sutil. */
+}
+
+/* 
+  ----------------------------------------
+  7. RESPONSIVIDADE (MEDIA QUERIES)
+  ----------------------------------------
+  - Ajusta o layout para diferentes tamanhos de tela.
+*/
+
+/* Para telas com largura máxima de 768px (tablets e celulares em modo paisagem). */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Diminui o tamanho do título principal. */
+    }
+
+    header input[type="text"] {
+        width: 80%; /* Aumenta a largura da barra de busca para preencher mais a tela. */
+    }
+}
+
+/* Para telas com largura máxima de 600px (celulares em modo retrato). */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Faz com que os cards fiquem um embaixo do outro (uma única coluna). */
+    }
+}
+
+
+
+/* 
+  ----------------------------------------
+  8. MATERIAS)
+  ----------------------------------------
+  - Ajusta o layout para diferentes tamanhos de tela.
+*/
+
+/* Estilo geral das seções das matérias */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    scroll-margin-top: 100px; /* deixa o scroll parar no lugar certo */
+}
+
+/* Título da matéria */
+section h2 {
+    color: #5e13aa;
+    border-left: 8px solid #5e13aa;
+    padding-left: 15px;
+}
+
+/* Imagem grande da matéria */
+section img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* Texto da matéria */
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+#btnTopo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background: #5e13aa;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: none; /* invisível até rolar */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    transition: opacity 0.3s ease;
+}
+#btnTopo:hover {
+    background: #4b0f88;
+}
+
+.separador-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.separador-icone span {
+    font-size: 24px;
+    color: #5e13aa;
+}
+
+
+.btn-home {
+    position: fixed;          /* Sempre visível */
+    top: 70px;                /* Mesmo lugar do seu menu */
+    right: 20px;              /* Ajuste se o menu estiver à direita */
+    background-color: #5e13aa;   /* Cor da sua paleta */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 1001;            /* Fica acima de tudo */
+    transition: transform .2s, background-color .2s;
+}
+
+.btn-home:hover {
+    background-color: #7a1cd6; /* Cor mais clara */
+    transform: scale(1.08);
+}
+
+.home-icon {
+    font-size: 22px;
+    color: white;
+    pointer-events: none;
+}
